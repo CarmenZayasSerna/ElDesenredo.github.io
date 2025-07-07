@@ -1,0 +1,232 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 100%;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+header {
+  background-color: #003400;
+  color: white;
+  box-shadow: 0 0.2rem 0.4rem rgba(22, 95, 30, 0.1);
+  position: sticky; 
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* Quitamos puntos de todas las listas de menús */
+.nav-menu,
+.dropdown-menu,
+.dropdown-menu ul {
+  list-style: none;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 1% 0;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.nav-menu a:hover {
+  color: #900C3F;
+}
+
+/* MENÚ DESPLEGABLE PRINCIPAL */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #003400;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.15);
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  z-index: 999;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  padding: 0.75rem 1.5rem;
+  white-space: nowrap;
+  color: #fff;
+  background-color: #003400;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #145214;
+  color: #fff;
+}
+
+/* SUBMENÚS ANIDADOS (sin hueco) */
+.dropdown-menu .dropdown-sub {
+  position: relative;
+}
+
+.dropdown-menu .dropdown-sub > .dropdown-menu {
+  left: 100%;           /* Justo pegado al borde */
+  top: 0;
+  margin-left: 0;       /* Nada de separación extra */
+  display: none;
+  position: absolute;
+  min-width: 180px;
+  background-color: #003400;
+  box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+.dropdown-menu .dropdown-sub:hover > .dropdown-menu {
+  display: block;
+}
+
+
+.dropdown-menu .dropdown-sub > .dropdown-menu a {
+  color: #fff;
+  background-color: #006700;
+}
+
+.dropdown-menu .dropdown-sub > .dropdown-menu a:hover {
+  background-color: #145214;
+}
+
+/* HERO IMAGE */
+.hero-image {
+  width: 100%;
+  height: 40vh;
+  background-image: url('../assets/img/Inicio.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2% 5%;
+}
+
+.hero-text {
+  width: 100%;
+  max-width: 80%;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1%;
+}
+
+.hero-text h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+
+.intro .text {
+    width: 60%;
+}
+
+.intro .photo img {
+    max-width: 250px;
+    border-radius: 8px;
+}
+
+.intro .text p {
+  text-align: justify;
+  line-height: 1.8;
+}
+
+#noticias-ori {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+#noticias-ori h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.news-item {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0.75rem;
+}
+.date-block {
+    background: #444;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+.date-block .day {
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1;
+}
+.date-block .month {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.content .title {
+    color: #333;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
