@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2º Bachillerato | Orientación</title>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/bach2.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li><a href="/ElDesenredo.github.io/index.html">Inicio</a></li>
+        <li class="dropdown">
+          <a href="#">Cursos</a>
+          <ul class="dropdown-menu">
+            <li class="dropdown-sub"><a href="../diversificacion/diversificacion.html">Diversificación</a></li>
+            <li class="dropdown-sub">
+              <a href="#">ESO</a>
+              <ul class="dropdown-menu">
+                <li><a href="../eso/1ESO.html">1º ESO</a></li>
+                <li><a href="../eso/2ESO.html">2º ESO</a></li>
+                <li><a href="../eso/3ESO.html">3º ESO</a></li>
+                <li><a href="../eso/4ESO.html">4º ESO</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-sub">
+              <a href="#">Bachillerato</a>
+              <ul class="dropdown-menu">
+                <li><a href="1BACH.html">1º Bachillerato</a></li>
+                <li><a href="2BACH.html">2º Bachillerato</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-sub">
+              <a href="#">FP</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Básico</a></li>
+                <li><a href="#">Medio</a></li>
+                <li><a href="#">Superior</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#">Familia</a></li>
+        <li><a href="TelarDeRecursos.html">Telar de recursos</a></li>
+        <li><a href="#">Novedades</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO 2º BACHILLERATO -->
+  <main class="bach2-main">
+    <section class="bienvenida">
+      <h1>Bienvenida a 2º de Bachillerato</h1>
+      <p>
+        Llegas a la recta final de tu etapa preuniversitaria. Aquí tienes recursos para investigación, simulacros EVAU,
+        orientación profesional y más.
+      </p>
+    </section>
+
+    <div class="bach2-grid">
+      <section class="bach2-bloque">
+        <h2>🔬 Investigación y proyectos</h2>
+        <ul>
+          <li><a href="#">Metodología científica</a></li>
+          <li><a href="#">Redacción de TFG/TFM</a></li>
+          <li><a href="#">Gestión de referencias</a></li>
+        </ul>
+      </section>
+      <section class="bach2-bloque">
+        <h2>📝 Simulacros EVAU</h2>
+        <ul>
+          <li><a href="#">Pruebas de años anteriores</a></li>
+          <li><a href="#">Consejos para el examen</a></li>
+          <li><a href="#">Calendario de ensayos</a></li>
+        </ul>
+      </section>
+      <section class="bach2-bloque">
+        <h2>🎓 Orientación profesional</h2>
+        <ul>
+          <li><a href="#">Feria de universidades</a></li>
+          <li><a href="#">Becas y ayudas</a></li>
+          <li><a href="#">Itinerarios formativos</a></li>
+        </ul>
+      </section>
+      <section class="bach2-bloque">
+        <h2>💻 Habilidades digitales</h2>
+        <ul>
+          <li><a href="#">Herramientas CAD</a></li>
+          <li><a href="#">Edición multimedia</a></li>
+          <li><a href="#">Gestión de proyectos</a></li>
+        </ul>
+      </section>
+      <section class="bach2-bloque">
+        <h2>🤝 Habilidades transversales</h2>
+        <ul>
+          <li><a href="#">Liderazgo y trabajo en equipo</a></li>
+          <li><a href="#">Comunicación efectiva</a></li>
+          <li><a href="#">Pensamiento crítico</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- VISOR DE DOCUMENTOS -->
+    <section class="bach2-bloque">
+  <h2>📄 Documentos descargables</h2>
+
+  <label for="docSelect" class="sr-only">Selecciona un documento</label>
+  <select id="docSelect">
+    <option value="">Selecciona un documento…</option>
+    <option value="/ElDesenredo.github.io/pages/assets/docs/Cuestionario inicial emocional_español.pdf">
+      Cuestionario inicial emocional
+    </option>
+    <option value="/ElDesenredo.github.io/pages/assets/docs/Cuestionario final emocional_español.pdf">
+      Cuestionario final emocional
+    </option>
+    <option value="/ElDesenredo.github.io/pages/assets/docs/Cronograma_U5.pdf">
+      Cronograma
+    </option>
+    <option value="/ElDesenredo.github.io/pages/assets/docs/Acompañamiento emocional en bachillerato.pdf">
+      Acompañamiento emocional en bachillerato
+    </option>
+    <option value="/ElDesenredo.github.io/pages/assets/docs/Captura de pantalla 2025-05-08 110050.png">
+      Emojis sentimientos
+    </option>
+    <option value="/ElDesenredo.github.io/pages/assets/docs/Captura de pantalla 2025-05-08 110009.png">
+      QR
+    </option>
+  </select>
+
+  <div id="viewerWrapper">
+    <iframe id="viewer" src="" loading="lazy"></iframe>
+  </div>
+</section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 El Desenredo. Blog ficticio para fines educativos.</p>
+  </footer>
+
+  <!-- JS PARA VISOR -->
+  <script>
+  const select  = document.getElementById('docSelect');
+  const wrapper = document.getElementById('viewerWrapper');
+  const iframe  = document.getElementById('viewer');
+
+  select.addEventListener('change', () => {
+    const url = select.value;
+    if (url) {
+      iframe.src = url;
+      wrapper.style.display = 'block';
+    } else {
+      iframe.src = '';
+      wrapper.style.display = 'none';
+    }
+  });
+</script>
+</body>
+</html>

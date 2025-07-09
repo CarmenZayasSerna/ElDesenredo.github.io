@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1º Bachillerato | Orientación</title>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/bach1.css">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li><a href="/ElDesenredo.github.io/index.html">Inicio</a></li>
+        <li class="dropdown">
+          <a href="#">Cursos</a>
+          <ul class="dropdown-menu">
+                          <li class="dropdown-sub"><a href="Diversificacion.html">Diversificación</a></li>
+
+              
+            <li class="dropdown-sub">
+              <a href="#">ESO</a>
+              <ul class="dropdown-menu">
+                <li><a href="1ESO.html">1º ESO</a></li>
+                <li><a href="2ESO.html">2º ESO</a></li>
+                <li><a href="3ESO.html">3º ESO</a></li>
+                <li><a href="4ESO.html">4º ESO</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-sub">
+              <a href="#">Bachillerato</a>
+              <ul class="dropdown-menu">
+                <li><a href="1BACH.html">1º Bachillerato</a></li>
+                <li><a href="2BACH.html">2º Bachillerato</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-sub">
+              <a href="#">FP</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Básico</a></li>
+                <li><a href="#">Medio</a></li>
+                <li><a href="#">Superior</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+         <li><a href="#">Familia</a></li>
+        <li><a href="TelarDeRecursos.html">Telar de recursos</a></li>
+        <li><a href="#">Novedades</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO 1º BACHILLERATO -->
+  <main class="bach1-main">
+    <section class="bienvenida">
+      <h1>Bienvenida a 1º de Bachillerato</h1>
+      <p>
+        Enhorabuena por tu paso a Bachillerato. Aquí encontrarás orientación para organizar tu estudio, planificar la
+        EBAU y descubrir itinerarios académicos y profesionales. ¡Vamos a por un gran curso!
+      </p>
+    </section>
+
+    <div class="bach1-grid">
+      <!-- BLOQUE 1: ORGANIZACIÓN Y PLANIFICACIÓN -->
+      <section class="bach1-bloque">
+        <h2>🗓 Organización y planificación</h2>
+        <ul>
+          <li><a href="#">Calendario del curso y exámenes</a></li>
+          <li><a href="#">Técnicas avanzadas de estudio</a></li>
+          <li><a href="#">Gestión del tiempo para proyectos</a></li>
+        </ul>
+      </section>
+
+      <!-- BLOQUE 2: ORIENTACIÓN EBAU -->
+      <section class="bach1-bloque">
+        <h2>🎯 Preparación EBAU</h2>
+        <ul>
+          <li><a href="#">Guía de la prueba EBAU</a></li>
+          <li><a href="#">Ejercicios de años anteriores</a></li>
+          <li><a href="#">Consejos para afrontar el examen</a></li>
+        </ul>
+      </section>
+
+      <!-- BLOQUE 3: OPCIONES UNIVERSITARIAS -->
+      <section class="bach1-bloque">
+        <h2>🎓 Itinerarios universitarios</h2>
+        <ul>
+          <li><a href="#">Cómo elegir carrera</a></li>
+          <li><a href="#">Ranking de universidades</a></li>
+          <li><a href="#">Feria universitaria virtual</a></li>
+        </ul>
+      </section>
+
+      <!-- BLOQUE 4: APOYO EMOCIONAL -->
+      <section class="bach1-bloque">
+        <h2>💬 Apoyo emocional</h2>
+        <ul>
+          <li><a href="#">Gestión del estrés y la ansiedad</a></li>
+          <li><a href="#">Taller de mindfulness</a></li>
+          <li><a href="#">Red de apoyo entre compañeros</a></li>
+        </ul>
+      </section>
+
+      <!-- BLOQUE 5: HABILIDADES DIGITALES -->
+      <section class="bach1-bloque">
+        <h2>💻 Habilidades digitales</h2>
+        <ul>
+          <li><a href="#">Herramientas de presentación</a></li>
+          <li><a href="#">Gestión de referencias bibliográficas</a></li>
+          <li><a href="#">Apps de productividad</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- VISOR DE DOCUMENTOS -->
+  
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 El Desenredo. Blog ficticio para fines educativos.</p>
+  </footer>
+
+  <!-- JS PARA VISOR -->
+  <script>
+    const select = document.getElementById('docSelect');
+    const wrapper = document.getElementById('viewerWrapper');
+    const iframe = document.getElementById('viewer');
+
+    select.addEventListener('change', () => {
+      const url = select.value;
+      if (url) {
+        iframe.src = url;
+        wrapper.style.display = 'block';
+      } else {
+        iframe.src = '';
+        wrapper.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
